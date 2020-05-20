@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Image, Text } from "office-ui-fabric-react";
 import { PrimaryButton } from "@fluentui/react";
 import { Card } from "@uifabric/react-cards";
-import { weatherInterface } from "../../App";
+import { weatherInterface } from "../../interface/weatherInterface";
 import mapWeatherToImage from "./mapWeatherToImage";
 import { Link } from "react-router-dom";
 

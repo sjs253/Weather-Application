@@ -1,7 +1,11 @@
 import React from "react";
 
 function DayComponent(props: any) {
-  return <h2>{props.match.params.day}</h2>;
+  return (
+    <>
+      <h3>{props.match.params.day}</h3>
+      <div>{props.weatherstate.monday.main}</div>
+    </>
+  );
 }
-
 export default DayComponent;

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import CardList from "./CardList";
-import { weatherInterface } from "../../App";
+import { weatherInterface } from "../../interface/weatherInterface";
 
 function CardListContainer(props: weatherInterface) {
   return (
