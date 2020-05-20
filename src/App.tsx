@@ -28,7 +28,7 @@ function App() {
 }
 
 function HeaderComponent() {
-  return <h1>Weather Application</h1>;
+  return <h1 style={{ textAlign: "center" }}>Weather Application</h1>;
 }
 
 export default App;

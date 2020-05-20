@@ -5,8 +5,12 @@ import { weatherInterface } from "../../interface/weatherInterface";
 function CardListContainer(props: weatherInterface) {
   return (
     <Fragment>
-      <h2>Here is the daily weather forecast of 5 consecutive days!</h2>
-      <CardList {...props} />
+      <h2 style={{ textAlign: "center" }}>
+        Here is the daily weather forecast of 5 consecutive days!
+      </h2>
+      <div style={{ width: 1250, marginRight: "auto", marginLeft: "auto" }}>
+        <CardList {...props} />
+      </div>
     </Fragment>
   );
 }
