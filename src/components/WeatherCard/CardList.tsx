@@ -4,6 +4,7 @@ import { PrimaryButton } from "@fluentui/react";
 import { Card } from "@uifabric/react-cards";
 import { weatherInterface } from "../../App";
 import mapWeatherToImage from "./mapWeatherToImage";
+import { Link } from "react-router-dom";
 
 const dummyarray = [1, 2, 3, 4, 5];
 function CardList(props: weatherInterface) {
@@ -47,13 +48,20 @@ function CardDisplay(props: any) {
       </Card.Item>
       <Card.Section>
         <Text style={{ textAlign: "left", margin: 8 }}>
-          Weather:{props.day.main}
+          <span style={{ fontWeight: "bold" }}>Day: </span>
+          <Link to={{ pathname: "/" + props.day.day }}>{props.day.day}</Link>
         </Text>
         <Text style={{ textAlign: "left", margin: 8 }}>
-          MaxTemp:{props.day.maxTemp}
+          <span style={{ fontWeight: "bold" }}>Weather: </span>
+          {props.day.main}
         </Text>
         <Text style={{ textAlign: "left", margin: 8 }}>
-          MinTemp:{props.day.minTemp}
+          <span style={{ fontWeight: "bold" }}>MaxTemp: </span>
+          {props.day.maxTemp}
+        </Text>
+        <Text style={{ textAlign: "left", margin: 8 }}>
+          <span style={{ fontWeight: "bold" }}>MinTemp: </span>
+          {props.day.minTemp}
         </Text>
       </Card.Section>
     </Card>
