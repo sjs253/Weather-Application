@@ -4,25 +4,38 @@ import "./App.css";
 import CardListContainer from "./components/WeatherCard/CardListContainer";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import DayComponent from "./components/DayComponent/DayComponent";
-import weatherstate from "./JsonData/Data";
+import weatherData from "./JsonData/Data";
+import NavbarComponent from "./components/Navigation/NavbarComponent";
+import { useState } from "react";
+import dummyData from "./JsonData/dummyData";
 
 function App() {
+  const [weatherstate, setweatherstate] = useState(dummyData);
+
+  const clickHandler = () => {
+    setweatherstate(weatherData());
+  };
+  console.log(weatherstate);
   return (
     <div style={{ margin: 16 }}>
       <HeaderComponent />
-      <Switch>
-        <Route
-          path="/"
-          exact
-          render={() => <CardListContainer {...weatherstate} />}
-        />
-        <Route
-          path="/:day"
-          render={(state) => (
-            <DayComponent {...state} weatherstate={weatherstate} />
-          )}
-        />
-      </Switch>
+      <button onClick={clickHandler}>Get Data</button>
+      <div style={{ display: "flex", marginTop: 100 }}>
+        <NavbarComponent />
+        <Switch>
+          <Route
+            path="/"
+            exact
+            render={() => <CardListContainer {...weatherstate} />}
+          />
+          <Route
+            path="/:day"
+            render={(state) => (
+              <DayComponent {...state} weatherstate={weatherstate} />
+            )}
+          />
+        </Switch>
+      </div>
     </div>
   );
 }

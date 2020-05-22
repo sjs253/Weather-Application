@@ -5,8 +5,8 @@ import { Card } from "@uifabric/react-cards";
 import { weatherInterface } from "../../interface/weatherInterface";
 import mapWeatherToImage from "./mapWeatherToImage";
 import { Link } from "react-router-dom";
-
 const dummyarray = [1, 2, 3, 4, 5];
+
 function CardList(props: weatherInterface) {
   function mapNumberToDay(number: any) {
     switch (number) {

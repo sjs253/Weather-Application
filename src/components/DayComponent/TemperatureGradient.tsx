@@ -48,7 +48,7 @@ export default function TemperatureGradient(props: any) {
   console.log(props.weatherstate[dayName]);
 
   return (
-    <div style={{ width: 750, marginLeft: "auto", marginRight: "auto" }}>
+    <div style={{ width: 750, marginLeft: "auto", marginRight: 375 }}>
       <Line
         data={state}
         options={{
