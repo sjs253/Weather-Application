@@ -8,6 +8,7 @@ import weatherData from "./JsonData/Data";
 import NavbarComponent from "./components/Navigation/NavbarComponent";
 import { useState } from "react";
 import dummyData from "./JsonData/dummyData";
+import DatePickerContainer from "./components/DatePicker/DatePickerContainer";
 
 function App() {
   const [weatherstate, setweatherstate] = useState(dummyData);
@@ -19,9 +20,10 @@ function App() {
   return (
     <div style={{ margin: 16 }}>
       <HeaderComponent />
-      <button onClick={clickHandler}>Get Data</button>
+      <DatePickerContainer />
       <div style={{ display: "flex", marginTop: 100 }}>
         <NavbarComponent />
+
         <Switch>
           <Route
             path="/"

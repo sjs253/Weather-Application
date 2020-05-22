@@ -67,23 +67,6 @@ export default function weatherData() {
     },
   };
 
-  function mapNumToDay(num: any): any {
-    switch (num) {
-      case 0:
-        return "monday";
-      case 1:
-        return "tuesday";
-      case 2:
-        return "wednesday";
-      case 3:
-        return "thursday";
-      case 4:
-        return "friday";
-      default:
-        return "lol";
-    }
-  }
-
   let url =
     "https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&appid=6c789ffd1363d4124e9a5e614207507c";
 
